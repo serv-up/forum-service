@@ -1,10 +1,8 @@
 package ait.cohort55.accounting.model;
 
-
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.catalina.User;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -43,6 +41,6 @@ public class UserAccount {
     }
 
     public boolean removeRole(String role) {
-        return roles.add(Role.valueOf(role));
+        return roles.remove(Role.valueOf(role));
     }
 }
